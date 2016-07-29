@@ -1,0 +1,26 @@
+{
+    "name": "demo-emp-dept",
+    "version": "0.0.1",
+    "description": "demo-emp-dept",
+    "dependencies": {
+        "bower": "1.x",
+        "grunt": "1.x",
+        "grunt-cli": "1.x",
+        "grunt-config": "1.x",
+        "grunt-contrib-clean": "1.x",
+        "grunt-contrib-copy": "1.x",
+        "grunt-contrib-concat": "1.x",
+        "grunt-contrib-sass": "1.x",		
+        "grunt-autoprefixer": "3.x",
+        "grunt-contrib-jshint": "1.x",
+        "grunt-ng-annotate": "2.x",
+        "grunt-contrib-uglify": "1.x",
+        "grunt-processhtml": "0.x",		
+        "jit-grunt": "0.x", 				
+        "time-grunt": "1.x",
+        "grunt-version-check": "0.x" 				
+    },
+    "engines": {
+        "node": "6.x"
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+	<head lang="en">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<base href="/" />
+		<title>RH Management</title>
+		<link href="css/EmpDept.css" rel="stylesheet" />
+		<script src="js/librariesBundle.js"></script>
+	</head>
+	<body ng-app="EmpDeptApp">
+		<div ui-view="header"></div>
+		<div class="container">
+			<div class="row top-buffer">
+				<div class="col-xs-8 col-xs-offset-2">
+					<div ui-view></div>					
+				</div>
+			</div>
+		</div>
+		<script src="js/EmpDeptBundle.js"></script>
+	</body>
+</html>

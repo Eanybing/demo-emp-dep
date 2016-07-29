@@ -1,0 +1,30 @@
+employers : [
+	{
+		"firstName": "José",
+		"lastName": "Camané",
+		"admissionDate": "01/01/2000",
+		"birthDate": "26/09/1979",
+		"department": 1
+	},
+	{
+		"firstName": "Porfirio",
+		"lastName": "Frio",
+		"admissionDate": "01/01/2000",
+		"birthDate": "01/08/2002",
+		"department": 1
+	},
+	{
+		"firstName": "Zeca",
+		"lastName": "Caseca",
+		"admissionDate": "01/01/2000",
+		"birthDate": "01/08/2002",
+		"department": 2
+	},
+	{
+		"firstName": "Miguel",
+		"lastName": "Norberto",
+		"admissionDate": "02/02/2010",
+		"birthDate": "01/08/1950",
+		"department": 2
+	}
+]

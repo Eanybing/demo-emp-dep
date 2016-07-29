@@ -1,0 +1,14 @@
+<a ui-sref="newDepartment" class="btn-primary btn-lg nodecoration">Add Department</a>
+<table class="table departmenttable">
+    <tr>
+        <td><h3>Departments</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="dept in deptListCtrl.departments">
+        <td>{{dept.name}}</td>
+        <td>
+            <a class="btn btn-primary" ui-sref="main.viewDepartment({id:dept.id})">View</a>
+            <a class="btn btn-danger"  ng-click="deptListCtrl.deleteDepartment(dept)">Delete</a>
+        </td>
+    </tr>
+</table>

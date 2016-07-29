@@ -1,0 +1,29 @@
+{
+    "name": "demo-emp-dept",
+    "version": "0.0.1",
+    "appPath": "src/main/webapp",
+    "dependencies": {
+	    "angular": "1.x",
+	    "angular-resource": "1.x",
+	    "angular-animate": "1.x",
+	    "angular-ui-router": "0.x",
+	    "angular-ui-switch": "0.x",	    
+	    "angular-bootstrap": "1.x",
+	    "bootstrap-sass": "3.x",
+	    "bootstrap": "2.x",
+	    "angular-ellipsis": "0.x",
+	    "angular-translate": "2.x",
+		"angular-translate-loader-static-files": "2.x",
+		"angular-translate-handler-log": "2.x",
+		"angular-ui-router-tabs": "2.x",
+		"angular-sanitize":"1.x",
+		"font-awesome": "4.x",
+		"angular-permission": "3.x",
+		"ngInfiniteScroll": "1.x",
+		"angular-datatables":"0.x",
+		"angular-tree-control":"0.x"
+  	},
+  	"resolutions": {
+    	"angular": "1.x"
+	}
+}
