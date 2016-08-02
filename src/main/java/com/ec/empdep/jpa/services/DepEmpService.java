@@ -1,5 +1,6 @@
 package com.ec.empdep.jpa.services;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ec.empdep.jpa.entities.Department;
 import com.ec.empdep.jpa.entities.Employer;
+import com.ec.empdep.jpa.entities.nonpersisted.DepartmentPercentil;
 import com.ec.empdep.jpa.repositories.DepartmentRepository;
 import com.ec.empdep.jpa.repositories.EmployerRepository;
 
@@ -58,7 +60,12 @@ public class DepEmpService {
 	Department getDepartment(@PathVariable("id") Long id) {
 		return depRep.findOne(id);
 	}
-
+	
+	@RequestMapping(path = "departments/{id}/statistics", method = RequestMethod.GET)
+	DepartmentPercentil getStatistics(@PathVariable("id") Long id) {
+		return depRep.getDepartmentData(id);
+	}
+	
 	@RequestMapping(path = "departments", method = RequestMethod.POST)
 	void createDepartment(@RequestBody Department department) {
 		depRep.save(department);

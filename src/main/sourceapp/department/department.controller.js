@@ -8,7 +8,11 @@ function DepartmentController($log, $stateParams, Department) {
 	vm.department = Department.get({
 		id : $stateParams.id
 	});
-	
+
+	vm.stats = Department.stats({
+		id : $stateParams.id
+	});
+
 	vm.tabData = [ {
 		heading : '<i>Department Details</i>',
 		route : 'main.viewDepartment.detail'

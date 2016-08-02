@@ -15,8 +15,7 @@ function DepartmentEmployersController($log, $scope, $stateParams, Department) {
 			field : 'email'
 		}, {
 			field : 'category',
-		} ]
-	};
+		} ]	};
 
 	vm.employersGrid.data = Department.employers({
 		id : $stateParams.id

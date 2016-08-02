@@ -16,6 +16,12 @@ function departmentService($resource) {
 			isArray : true,
 			url : "api/departments/:id/employers",
 			responseType : 'json'
+		},
+		stats : {
+			method : 'GET',
+			isArray : false,
+			url :'api/departments/:id/statistics',
+			responseType : 'json'
 		}
 	}, {
 		stripTrailingSlashes : false

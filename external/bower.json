@@ -21,7 +21,8 @@
 		"angular-permission": "3.x",
 		"ngInfiniteScroll": "1.x",
 		"angular-datatables":"0.x",
-		"angular-tree-control":"0.x"
+		"angular-tree-control":"0.x",
+		"angular-ui-grid" : "3.X"
   	},
   	"resolutions": {
     	"angular": "1.x"

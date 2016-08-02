@@ -1,0 +1,91 @@
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin vertical-divider($height){
+	height: $height;
+	border-left: 1px solid black;
+	padding: 0 0;
+	width: 5px;
+}
+
+@mixin text-style($weight, $color, $fontStyle: normal, $size:"", $line-height:"") {
+
+    font-weight: $weight;	
+	color: $color;
+	
+	@if $fontStyle != normal {
+	   font-style: $fontStyle;
+	}
+	
+	@if $size != "" {
+	   font-size: $size;
+	}
+	
+	@if $line-height != "" {
+	   line-height: $line-height;
+	}
+}
+
+//generate button/label design with special format
+//desc = button continue no login
+//asc = button close session
+@mixin wave-btn-design($width, $bottom-position, $top-position, $height, $color, $back-color, $direction:"desc") {
+
+  	background-color: $color;
+	
+	&:disabled {
+        background-color: $lightgrey2-color;
+ 	}
+ 	 
+ 	&:before, &:after {
+  			content: "";	
+		  	position: absolute;
+  			width: 0;	
+  			height: 25px;
+  	}
+  	
+  	@if $direction == "desc" {
+
+		&:before, &:after {
+			right: 0;
+		}
+		
+  		&:before {
+  			bottom: $bottom-position; 
+  			border-left: $width solid transparent;
+  			border-right: 0 solid transparent;
+  			border-top: $height solid $back-color;
+  		}
+  		
+  		&:after {
+	  		top: $top-position;	  
+	  		border-left: $width solid transparent;
+	  		border-right: 0 solid transparent;
+	  		border-bottom: $height solid $back-color;
+  		}
+  	}
+  	@else {
+  	
+  		&:before, &:after {
+			left: 0;
+		}
+		
+  		&:before {
+	  	  bottom: $bottom-position; 
+		  border-left: 0px solid transparent;
+		  border-right: $width solid transparent;
+		  border-top: $height solid $back-color;
+  		}
+  		
+  		&:after {
+	  	  height: 25px;
+	  	  top: $top-position;
+		  border-left: 0px solid transparent;
+		  border-right: $width solid transparent;
+		  border-bottom: $height solid $back-color;
+  		}
+ 	}
+}
