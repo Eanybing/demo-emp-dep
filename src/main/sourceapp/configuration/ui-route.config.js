@@ -16,6 +16,20 @@ function uiRouterConfig($urlRouterProvider, $stateProvider) {
 		}
 	});
 
+	$stateProvider.state('main.employers', {
+		url : 'employers',
+		templateUrl : 'html/employer-list.html',
+		controller : 'EmployerListController',
+		controllerAs : 'empListCtrl'
+	});
+
+	$stateProvider.state('main.viewEmployer', {
+		url : 'employers/:id/view',
+		templateUrl : 'html/employer.html',
+		controller : 'EmployerController',
+		controllerAs : 'empCtrl'
+	});
+
 	$stateProvider.state('main.departments', {
 		url : 'departments',
 		templateUrl : 'html/department-list.html',
@@ -42,14 +56,7 @@ function uiRouterConfig($urlRouterProvider, $stateProvider) {
 		templateUrl : 'html/department-employers.html',
 		controller : 'DepartmentEmployersController',
 		controllerAs : 'depEmpCtrl'
-	});
-	
-	$stateProvider.state('main.viewEmployer', {
-		url : 'employers/:id/view',
-		templateUrl : 'html/employer.html',
-		controller : 'EmployerController',
-		controllerAs : 'empCtrl'
-	});
+	});		
 	
 	$stateProvider.state('main.departments.new', {
 		url : '/new',

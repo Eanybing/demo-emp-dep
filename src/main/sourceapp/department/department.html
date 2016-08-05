@@ -1,12 +1,14 @@
 <h1>{{depCtrl.department.name}}</h1>
 
 <div class="row">
-  <div class="col-md-2">
-    <tabs data="depCtrl.tabData" type="pills" template-url="ui-router-tabs-custom-ui-view-template.html"></tabs>
-  </div>
-
-  <!-- custom location of ui-view -->
-  <div class="col-md-10">
-    <ui-view autoscroll></ui-view>
-  </div>
+	<div class="col-md-10">
+		<tabs data="depCtrl.tabData" type="tabs"
+			template-url="ui-router-tabs-custom-ui-view-template.html"></tabs>
+	</div>
+</div>
+<!-- custom location of ui-view -->
+<div class="row">
+	<div class="col-md-10">
+		<ui-view autoscroll></ui-view>
+	</div>
 </div>

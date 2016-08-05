@@ -11,6 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Past;
+
+import org.hibernate.validator.constraints.Email;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -35,20 +38,23 @@ public class Employer {
 
 	@Column(name = "birth_date", nullable = false)
 	@JsonFormat(pattern = "dd/MM/yyyy")
+	@Past
 	private Date birthDate;
 
 	@Column(name = "admission_date", nullable = false)
 	@JsonFormat(pattern = "dd/MM/yyyy")
+	@Past
 	private Date admissionDate;
 
 	@Column(name = "email", nullable = true)
+	@Email
 	private String email;
 
 	@Column(name = "salary", nullable = true)
 	private BigDecimal salary;
 
 	@ManyToOne
-	@JoinColumn(name = "cat_id")
+	@JoinColumn(name = "cat_id", referencedColumnName = "id")
 	private EmployerCategory category;
 
 	@ManyToOne

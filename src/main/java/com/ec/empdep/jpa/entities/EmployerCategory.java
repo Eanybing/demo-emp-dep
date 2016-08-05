@@ -23,6 +23,14 @@ public class EmployerCategory {
 	@Column(name = "name", nullable = false, unique = true)
 	private String name;
 
+	protected EmployerCategory() {
+
+	}
+
+	public EmployerCategory(Long id) {
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}

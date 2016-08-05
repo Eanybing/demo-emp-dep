@@ -1,7 +1,16 @@
-<h1>Employer List</h1>
-<hr/>
-<div ng-repeat="employer in empListCtrl.employerList">
-	<h3>{{employer.firstName}} - {{employer.lastName}}</h3>
-	<strong>{{employer.department.name}}</strong>
-</div>
-<h1>Employer List - The end</h1>
+<a ui-sref="newEmployer" class="btn-primary btn-lg nodecoration">Add Employer</a>
+<table class="table employertable">
+    <tr>
+        <td><h3>Employers</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="emp in empListCtrl.employers">
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.lastName}}</td>
+        <td><a ui-sref="main.viewDepartment({id:emp.department.id})">{{emp.department.name}}</a></td>
+        <td>
+            <a class="btn btn-primary" ui-sref="main.viewEmployer({id:emp.id})">View</a>
+            <a class="btn btn-danger"  ng-click="empListCtrl.deleteEmployer(emp)">Delete</a>
+        </td>
+    </tr>
+</table>

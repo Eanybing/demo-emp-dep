@@ -27,6 +27,9 @@ public interface EmployerRepository extends DepEmpBaseRepository<Employer, Long>
 
 	@Query(value = "select t from Employer t where t.department.id = :deptNo")
 	List<Employer> getAllByDepartment(@Param("deptNo") final Long deptNo);
+	
+	@Query(value = "select t from Employer t where t.category.id = :catId")
+	List<Employer> getAllByCategory(@Param("catId") final Long catId);
 
 	List<Employer> findByCategory(final EmployerCategory category);
 

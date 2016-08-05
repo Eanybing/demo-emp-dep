@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-sm-3">
+	<div class="col-md-10">
 		<div class="form-group">
 			<label for="name" class="col-sm-2 control-label">Name</label>
 			<div class="col-sm-10">
@@ -7,24 +7,30 @@
 					class="form-control" id="name" placeholder="Department Name" />
 			</div>
 		</div>
-		<div class="form-group">
-			<label for="location" class="col-sm-2 control-label">Location</label>
-			<div class="col-sm-10">
-				<input type="text" ng-model="depCtrl.department.location"
-					class="form-control" id="location"
-					placeholder="Department Location" />
-			</div>
+	</div>
+</div>
+<div class="row">
+	<div class="form-group">
+		<label for="location" class="col-sm-2 control-label">Location</label>
+		<div class="col-md-10">
+			<input type="text" ng-model="depCtrl.department.location"
+				class="form-control" id="location" placeholder="Department Location" />
 		</div>
 	</div>
-	<div class="col-sm-3">
+</div>
+<div class="row">
+	<div class="col-md-5">
 		<div>
 			<span>Average Salary</span> <label ng-bind="depCtrl.stats.avgSalary"></label>
 		</div>
-		<div>
-			<span>Min Salary</span> <label ng-bind="depCtrl.stats.minSalary"></label>
-		</div>
-		<div>
-			<span>Max Salary</span> <label ng-bind="depCtrl.stats.maxSalary"></label>
-		</div>
 	</div>
+</div>
+<div class="row">
+	<div class="col-md-5">
+		<span>Min Salary</span> <label ng-bind="depCtrl.stats.minSalary"></label>
+	</div>
+	<div class="col-md-5">
+		<span>Max Salary</span> <label ng-bind="depCtrl.stats.maxSalary"></label>
+	</div>
+</div>
 </div>
