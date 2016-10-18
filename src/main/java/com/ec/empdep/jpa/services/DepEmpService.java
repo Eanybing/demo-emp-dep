@@ -3,6 +3,10 @@ package com.ec.empdep.jpa.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.PagedResources;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +37,15 @@ public class DepEmpService {
 	@RequestMapping(path = "employers", method = RequestMethod.GET)
 	List<Employer> findAllEmployers() {
 		return empRep.findAll();
+	}
+
+	@RequestMapping(path = "employers_paged", method = RequestMethod.GET, produces = { "application/json" })
+	PagedResources<Employer> findAllEmployers(Pageable pageable, PagedResourcesAssembler assembler) {
+		Page<Employer> pages = empRep.findAll(pageable);
+
+		PagedResources<Employer> employers = assembler.toResource(pages, assembler);
+
+		return employers;
 	}
 
 	@RequestMapping(path = "employers/{id}", method = RequestMethod.GET)
@@ -87,7 +100,7 @@ public class DepEmpService {
 	List<Employer> getAllDepartmentEmployers(@PathVariable("id") Long departmentId) {
 		return empRep.getAllByDepartment(departmentId);
 	}
-	
+
 	/*
 	 * Category
 	 */
@@ -102,7 +115,6 @@ public class DepEmpService {
 		return empCatRep.findOne(id);
 	}
 
-	
 	@RequestMapping(path = "categories", method = RequestMethod.POST)
 	void createEmployerCategory(@RequestBody EmployerCategory employer) {
 		empCatRep.save(employer);
