@@ -4,14 +4,14 @@
 
 	<groupId>com.ec</groupId>
 	<artifactId>demo-emp-dep</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>emp-dept</name>
 	<description>emp-dept</description>
 	<scm>
 		<developerConnection>scm:git:https://github.com/eliseucartaxo/demo-emp-dep.git</developerConnection>
 	  
-    <tag>demo-emp-dep-0.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
